@@ -1,0 +1,757 @@
+<!-- Declares HTML5 document standard -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Character encoding and responsive viewport for mobile/desktop -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of M. Nafiz Imtiaz — Software Engineering student at Daffodil International University specializing in C, HTML5, CSS3, JavaScript, Node.js, and AI.">
+  <title>M. Nafiz Imtiaz | Software Engineering Portfolio</title>
+
+  <!-- Google Fonts: 'Syne' (Headings), 'Plus Jakarta Sans' (Body), 'JetBrains Mono' (Code/Labels) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Links external CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Accessibility link allowing keyboard users to jump directly to main content -->
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <!-- Decorative Aurora Background Glows (Pure CSS) -->
+  <div class="aurora-bg" aria-hidden="true">
+    <div class="aurora-blob blob-cyan"></div>
+    <div class="aurora-blob blob-blue"></div>
+  </div>
+
+  <!-- ================= TOP EDITORIAL MASTHEAD ================= -->
+  <header class="masthead" id="top">
+    <div class="wrapper masthead-bar">
+      
+      <!-- Brand / Identity -->
+      <a class="identity" href="#main-content">
+        <span class="identity-monogram">NI</span>
+        <span class="identity-text">nafiz<span>.dev</span></span>
+      </a>
+
+      <!-- Primary Navigation Links -->
+      <nav class="primary-nav" id="primaryNav" aria-label="Primary Navigation">
+        <a href="#perspective">About</a>
+        <a href="#education">Education & CV</a>
+        <a href="#skills">Skills</a>
+        <a href="#work">Projects</a>
+        <a href="#mentoring">Mentoring</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <!-- Top Bar Controls: Motion Toggle, Theme Toggle, Quick CV Download, Mobile Menu -->
+      <div class="masthead-controls">
+        <button class="util-btn" id="motionBtn" type="button" aria-pressed="false" title="Toggle animations">
+          MOTION: ON
+        </button>
+
+        <button class="util-btn" id="themeBtn" type="button" title="Switch Dark/Light Mode">
+          THEME: DARK
+        </button>
+
+        <!-- HTML5 'download' attribute triggers immediate download of assets/cv.pdf -->
+        <a class="top-cv-link" href="assets/cv.pdf" download="M_Nafiz_Imtiaz_CV.pdf">
+          Download CV ↓
+        </a>
+
+        <button class="mobile-trigger" id="mobileTrigger" type="button" aria-expanded="false" aria-controls="primaryNav">
+          Menu
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main id="main-content">
+
+    <!-- ================= HERO STAGE ================= -->
+    <section class="hero-stage">
+      <div class="wrapper">
+        
+        <!-- Top Metadata Row -->
+        <div class="hero-meta-row">
+          <span>SYSTEMS · FULL-STACK WEB (HTML5 / CSS3 / JS) · AI & HARDWARE</span>
+          <span>DHAKA, BANGLADESH · DIU SOFTWARE ENGINEERING</span>
+        </div>
+
+        <!-- Infinite Marquee Ticker Ribbon -->
+        <div class="marquee-strip" aria-hidden="true">
+          <div class="marquee-track">
+            <span>HTML5 & CSS3 FRONTEND ARCHITECTURE ·</span>
+            <span>100% CODEFORWIN C SOLVED ·</span>
+            <span>JAVASCRIPT, NODE.JS & MONGODB ·</span>
+            <span>LOCAL GEMMA LLM ON GPU ·</span>
+            <span>HTML5 & CSS3 FRONTEND ARCHITECTURE ·</span>
+            <span>100% CODEFORWIN C SOLVED ·</span>
+            <span>JAVASCRIPT, NODE.JS & MONGODB ·</span>
+            <span>LOCAL GEMMA LLM ON GPU ·</span>
+          </div>
+        </div>
+
+        <!-- Main Hero Split Grid -->
+        <div class="hero-grid">
+          
+          <!-- Left Column: Intro, Typewriter, CTAs & Interactive Terminal -->
+          <div class="hero-editorial">
+            <div class="status-pill">
+              <span class="pulse-dot"></span> SOFTWARE ENGINEERING UNDERGRADUATE @ DIU
+            </div>
+
+            <p class="mono-index">HELLO, MY NAME IS</p>
+            <h1 class="display-title">
+              M. Nafiz <span class="title-highlight">Imtiaz.</span>
+            </h1>
+
+            <!-- Dynamic JavaScript Typewriter Line -->
+            <div class="typewriter-row">
+              I build with <span class="typewriter-text" id="typewriter"></span><span class="type-cursor">|</span>
+            </div>
+
+            <p class="hero-statement">
+              I am a Software Engineering student at <strong>Daffodil International University</strong> bridging low-level <strong>C</strong> systems programming with clean <strong>HTML5, CSS3, and JavaScript</strong> web development, backend databases, and AI hardware.
+            </p>
+
+            <!-- Primary Call-To-Action Buttons -->
+            <div class="cta-group">
+              <a class="btn-solid" href="#work">Explore My Work <span>↗</span></a>
+              <a class="btn-outline" href="assets/cv.pdf" download="M_Nafiz_Imtiaz_CV.pdf">Download CV (PDF) <span>↓</span></a>
+              <a class="btn-text" href="#contact">Let's Connect <span>↗</span></a>
+            </div>
+
+            <!-- Interactive Mini Terminal (Controlled by script.js) -->
+            <div class="interactive-terminal" aria-label="Interactive developer terminal">
+              <div class="term-bar">
+                <div class="term-dots"><i></i><i></i><i></i></div>
+                <span class="term-title">nafiz@diu-swe: ~ (Click a command below)</span>
+              </div>
+              <div class="term-buttons">
+                <button class="cmd-btn active" type="button" data-cmd="web">$ ./skills --web</button>
+                <button class="cmd-btn" type="button" data-cmd="c">$ ./codeforwin --status</button>
+                <button class="cmd-btn" type="button" data-cmd="ai">$ ./local-llm --gpu</button>
+              </div>
+              <div class="term-screen" id="termScreen">
+                &gt; Web Stack: HTML5, CSS3 (Grid/Flexbox), JavaScript (ES6+), React JS, Node.js, Express.js
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Portrait Card -->
+          <aside class="hero-portrait-box">
+            <div class="portrait-card">
+              <div class="portrait-header">
+                <span class="mono-tag">PORTRAIT / M. NAFIZ IMTIAZ</span>
+                <span class="live-indicator"><i></i> OPEN TO OPPORTUNITIES</span>
+              </div>
+              <div class="portrait-image-wrap">
+                <!-- Place your photo inside assets/profile.jpg -->
+                <img src="assets/profile.jpg" alt="Portrait of M. Nafiz Imtiaz">
+              </div>
+              <div class="portrait-footer">
+                <div>
+                  <small>CORE FOCUS</small>
+                  <strong>C, HTML5/CSS3, JS & AI</strong>
+                </div>
+                <div>
+                  <small>LOCATION</small>
+                  <strong>Dhaka, Bangladesh</strong>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+        </div>
+
+        <!-- Impact Metrics Row -->
+        <div class="impact-banner">
+          <div class="impact-metrics">
+            <article class="metric-box">
+              <span class="metric-number">100%</span>
+              <h3>Codeforwin C Exercises Solved</h3>
+              <p>Every pointer, memory management, bitwise operation, and data structure problem completed.</p>
+            </article>
+            <article class="metric-box">
+              <span class="metric-number">HTML5 & CSS3</span>
+              <h3>Clean Web & Full-Stack UI</h3>
+              <p>Responsive layouts built with raw semantic HTML5, modern CSS3 Grid/Flexbox, JavaScript, React, and Node.js.</p>
+            </article>
+            <article class="metric-box">
+              <span class="metric-number">05+</span>
+              <h3>Core Programming Languages</h3>
+              <p>Advanced fluency in C and JavaScript, alongside Python, Java, and C++.</p>
+            </article>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 01 / ABOUT & PERSPECTIVE SWITCHER ================= -->
+    <section class="editorial-section border-top" id="perspective">
+      <div class="wrapper">
+        
+        <div class="section-header-split">
+          <div>
+            <p class="mono-index">01 / ABOUT ME & MY PERSPECTIVE</p>
+            <h2 class="section-heading">Three disciplines.<br><span>One engineering mindset.</span></h2>
+          </div>
+          <p class="section-intro-text">
+            I enjoy understanding technology from the circuit board up to the browser window—combining low-level C programming with responsive <strong>HTML5 & CSS3</strong> interfaces, backend databases, and custom hardware.
+          </p>
+        </div>
+
+        <!-- Interactive Perspective Switcher -->
+        <div class="perspective-stage">
+          <div class="perspective-top-bar">
+            <span class="mono-index">CLICK A DISCIPLINE TO EXPLORE</span>
+            <span class="mono-index" id="perspectiveCounter">01 / 03</span>
+          </div>
+
+          <div class="watermark-word" id="perspectiveWatermark" aria-hidden="true">SYSTEMS</div>
+
+          <div class="perspective-tabs" role="tablist" aria-label="Choose an engineering perspective">
+            <button class="p-tab active" type="button" data-perspective="0" role="tab" aria-selected="true">
+              01 / Systems & C <span>↗</span>
+            </button>
+            <button class="p-tab" type="button" data-perspective="1" role="tab" aria-selected="false">
+              02 / Web (HTML5, CSS3 & JS) <span>↗</span>
+            </button>
+            <button class="p-tab" type="button" data-perspective="2" role="tab" aria-selected="false">
+              03 / Local AI & Hardware <span>↗</span>
+            </button>
+          </div>
+
+          <div class="perspective-body">
+            <h3 id="perspectiveHeading">Master the machine underneath.</h3>
+            <p id="perspectiveDescription">
+              By solving 100% of the C programming problems on Codeforwin, I developed a deep intuition for pointers, manual memory allocation, bitwise manipulation, and algorithmic efficiency before relying on high-level abstractions.
+            </p>
+            <div class="capability-pills" id="perspectivePills">
+              <span>C (Advanced)</span>
+              <span>C++</span>
+              <span>Pointers & Memory</span>
+              <span>Data Structures & Algorithms</span>
+              <span>Linux CLI</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 02 / EDUCATION TIMELINE & CV VAULT ================= -->
+    <section class="editorial-section border-top" id="education">
+      <div class="wrapper">
+        
+        <div class="section-header-split">
+          <div>
+            <p class="mono-index">02 / EDUCATION & CURRICULUM VITAE</p>
+            <h2 class="section-heading">My learning <span class="title-highlight">journey.</span></h2>
+          </div>
+          <p class="section-intro-text">
+            The academic foundation behind my software engineering work, alongside a direct space to download my official Curriculum Vitae.
+          </p>
+        </div>
+
+        <div class="cv-vault-layout">
+          
+          <!-- Left: Academic Timeline -->
+          <div class="edu-timeline">
+            
+            <article class="edu-card">
+              <div class="edu-badge-row">
+                <span class="edu-kicker">UNDERGRADUATE · CURRENT</span>
+                <span class="edu-status"><i></i> Actively Studying</span>
+              </div>
+              <h3>B.Sc. in Software Engineering</h3>
+              <p class="edu-school">Daffodil International University (DIU) · Dhaka, Bangladesh</p>
+              <p class="edu-desc">
+                Studying software engineering principles, algorithms, full-stack web technologies (HTML5, CSS3, JS), relational databases, and system architecture.
+              </p>
+              <div class="capability-pills">
+                <span>Object-Oriented Programming</span>
+                <span>Data Structures & Algorithms</span>
+                <span>System Analysis & Design</span>
+                <span>Database Management Systems</span>
+              </div>
+            </article>
+
+            <article class="edu-card">
+              <div class="edu-badge-row">
+                <span class="edu-kicker">HIGHER SECONDARY (HSC)</span>
+                <span class="mono-tag">SCIENCE GROUP</span>
+              </div>
+              <h3>Higher Secondary Certificate</h3>
+              <p class="edu-school">Dhaka, Bangladesh</p>
+              <p class="edu-desc">
+                Completed higher secondary education with a strong focus on Physics, Higher Mathematics, and Information & Communication Technology (ICT).
+              </p>
+            </article>
+
+            <article class="edu-card">
+              <div class="edu-badge-row">
+                <span class="edu-kicker">SECONDARY (SSC)</span>
+                <span class="mono-tag">SCIENCE GROUP</span>
+              </div>
+              <h3>Secondary School Certificate</h3>
+              <p class="edu-school">Dhaka, Bangladesh</p>
+              <p class="edu-desc">
+                Built early analytical foundations in science, mathematics, and computer fundamentals.
+              </p>
+            </article>
+
+          </div>
+
+          <!-- Right: Dedicated CV / Resume Download Studio -->
+          <aside class="cv-sheet" id="cv-space" aria-label="Curriculum Vitae Download Space">
+            <div class="cv-sheet-top">
+              <span class="mono-tag">OFFICIAL RESUME / CV</span>
+              <span class="cv-pages">PDF · 2 PAGES</span>
+            </div>
+
+            <div class="cv-sheet-preview">
+              <h3>M. Nafiz Imtiaz</h3>
+              <p class="cv-sub">Software Engineering Student @ Daffodil International University</p>
+              <hr class="cv-divider">
+              <ul class="cv-highlights">
+                <li><strong>Core Languages:</strong> C (Advanced), JavaScript (Advanced), Python, Java, C++</li>
+                <li><strong>Web Technologies:</strong> HTML5, CSS3, React JS, Node.js, Express.js</li>
+                <li><strong>Databases & Design:</strong> MS SQL Server, MongoDB, Eraser.io, PlantUML</li>
+                <li><strong>Hardware & AI:</strong> Local Gemma LLM on GPU, PAM8403 Audio, PC Building</li>
+                <li><strong>Achievement:</strong> 100% Codeforwin C Exercises Solved</li>
+              </ul>
+            </div>
+
+            <!-- Download & Preview Buttons -->
+            <div class="cv-sheet-actions">
+              <a class="btn-solid full-width" href="assets/cv.pdf" download="M_Nafiz_Imtiaz_CV.pdf">
+                Download Official CV (PDF) <span>↓</span>
+              </a>
+              <a class="btn-outline full-width" href="assets/cv.pdf" target="_blank" rel="noopener noreferrer">
+                Preview CV in New Tab <span>↗</span>
+              </a>
+            </div>
+          </aside>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 03 / TECHNICAL SKILLS & MASTERY BARS ================= -->
+    <section class="editorial-section border-top" id="skills">
+      <div class="wrapper">
+        
+        <div class="section-header-split">
+          <div>
+            <p class="mono-index">03 / TECHNICAL TOOLKIT</p>
+            <h2 class="section-heading">Skills & <span class="title-highlight">technologies.</span></h2>
+          </div>
+          <p class="section-intro-text">
+            From crafting semantic <strong>HTML5 & CSS3</strong> layouts to managing pointers in <strong>C</strong> and querying <strong>SQL/NoSQL</strong> databases.
+          </p>
+        </div>
+
+        <!-- Visual Skill Proficiency Bars -->
+        <div class="mastery-grid">
+          <div class="mastery-item">
+            <div class="mastery-label">
+              <strong>C Programming (Pointers, Memory, Logic)</strong>
+              <span>Advanced · 95%</span>
+            </div>
+            <div class="progress-track"><div class="progress-fill" style="width: 95%;"></div></div>
+          </div>
+
+          <div class="mastery-item">
+            <div class="mastery-label">
+              <strong>HTML5 & CSS3 (Semantic HTML, Flexbox, Grid)</strong>
+              <span>Advanced · 95%</span>
+            </div>
+            <div class="progress-track"><div class="progress-fill" style="width: 95%;"></div></div>
+          </div>
+
+          <div class="mastery-item">
+            <div class="mastery-label">
+              <strong>JavaScript (ES6+, DOM, Async/Await)</strong>
+              <span>Advanced · 90%</span>
+            </div>
+            <div class="progress-track"><div class="progress-fill" style="width: 90%;"></div></div>
+          </div>
+
+          <div class="mastery-item">
+            <div class="mastery-label">
+              <strong>Node.js, Express.js & React JS</strong>
+              <span>Proficient · 85%</span>
+            </div>
+            <div class="progress-track"><div class="progress-fill" style="width: 85%;"></div></div>
+          </div>
+
+          <div class="mastery-item">
+            <div class="mastery-label">
+              <strong>Microsoft SQL Server & MongoDB</strong>
+              <span>Proficient · 85%</span>
+            </div>
+            <div class="progress-track"><div class="progress-fill" style="width: 85%;"></div></div>
+          </div>
+
+          <div class="mastery-item">
+            <div class="mastery-label">
+              <strong>Python, Java & C++</strong>
+              <span>Solid Foundation · 80%</span>
+            </div>
+            <div class="progress-track"><div class="progress-fill" style="width: 80%;"></div></div>
+          </div>
+        </div>
+
+        <!-- 4-Column Capability Matrix -->
+        <div class="matrix-grid">
+          <div class="matrix-col">
+            <span class="mono-tag">01 / LANGUAGES</span>
+            <h4>Programming</h4>
+            <ul>
+              <li>C (Advanced)</li>
+              <li>JavaScript (Advanced)</li>
+              <li>Python</li>
+              <li>Java</li>
+              <li>C++</li>
+            </ul>
+          </div>
+          <div class="matrix-col">
+            <span class="mono-tag">02 / WEB FRONTEND & BACKEND</span>
+            <h4>Web Development</h4>
+            <ul>
+              <li>HTML5 (Semantic Markup)</li>
+              <li>CSS3 (Flexbox, Grid, Animations)</li>
+              <li>JavaScript & React JS</li>
+              <li>Node.js & Express.js</li>
+              <li>RESTful APIs</li>
+            </ul>
+          </div>
+          <div class="matrix-col">
+            <span class="mono-tag">03 / DATA & ARCHITECTURE</span>
+            <h4>Databases & Tools</h4>
+            <ul>
+              <li>Microsoft SQL Server</li>
+              <li>MongoDB</li>
+              <li>Git & GitHub</li>
+              <li>Linux System Administration</li>
+              <li>Eraser.io & PlantUML (DFDs)</li>
+            </ul>
+          </div>
+          <div class="matrix-col">
+            <span class="mono-tag">04 / AI & HARDWARE</span>
+            <h4>Systems & Electronics</h4>
+            <ul>
+              <li>Local LLM Deployment (Gemma)</li>
+              <li>LM Studio & GPU CLI</li>
+              <li>Custom PC Assembly</li>
+              <li>DIY PAM8403 Audio Circuits</li>
+              <li>Battery / E-Bike Research</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 04 / SELECTED WORK & PROJECTS ================= -->
+    <section class="editorial-section border-top" id="work">
+      <div class="wrapper">
+        
+        <div class="section-header-split">
+          <div>
+            <p class="mono-index">04 / SELECTED WORK & ACHIEVEMENTS</p>
+            <h2 class="section-heading">Ideas turned into <span class="title-highlight">working systems.</span></h2>
+          </div>
+          <p class="section-intro-text">
+            A selection of my key programming milestones, full-stack web architecture, and local AI/hardware engineering setups.
+          </p>
+        </div>
+
+        <div class="case-study-list">
+
+          <article class="case-row">
+            <div class="case-index">01</div>
+            <div class="case-meta">
+              <span class="mono-tag">KEY MILESTONE · LOW-LEVEL SYSTEMS</span>
+              <h3>100% Completion of Codeforwin C Exercises</h3>
+              <p>
+                Solved every single C programming problem on the Codeforwin platform. Developed a rock-solid command of memory addresses, pointers, dynamic memory allocation, bitwise operations, recursion, and data structures.
+              </p>
+              <div class="capability-pills">
+                <span>C Programming</span>
+                <span>Pointers & Memory</span>
+                <span>Bitwise Logic</span>
+                <span>Data Structures</span>
+              </div>
+            </div>
+            <div class="case-action">
+              <a class="btn-outline" href="https://github.com/nafiz99666test-tech" target="_blank" rel="noopener noreferrer">
+                GitHub Profile <span>↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="case-row">
+            <div class="case-index">02</div>
+            <div class="case-meta">
+              <span class="mono-tag">FULL-STACK WEB DEVELOPMENT · SYSTEM ARCHITECTURE</span>
+              <h3>Full-Stack Web Platform & Responsive UI</h3>
+              <p>
+                Built responsive web interfaces using raw <strong>HTML5, CSS3, and JavaScript</strong> alongside full-stack backend services powered by <strong>Node.js, Express.js, and MongoDB</strong>. Designed the system architecture and Data Flow Diagrams (DFDs) in Eraser.io prior to coding.
+              </p>
+              <div class="capability-pills">
+                <span>HTML5 & CSS3</span>
+                <span>JavaScript</span>
+                <span>Node.js & Express</span>
+                <span>MongoDB</span>
+                <span>Eraser.io</span>
+              </div>
+            </div>
+            <div class="case-action">
+              <a class="btn-outline" href="https://github.com/nafiz99666test-tech" target="_blank" rel="noopener noreferrer">
+                View Code <span>↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="case-row">
+            <div class="case-index">03</div>
+            <div class="case-meta">
+              <span class="mono-tag">LOCAL AI & GPU INFERENCE · LINUX CLI</span>
+              <h3>Local Large Language Model Deployment (Gemma)</h3>
+              <p>
+                Configured and deployed quantized local LLMs (such as Google's Gemma) directly on consumer GPU hardware using Command Line Interfaces and LM Studio. Benchmarked token speeds and tuned parameters for smooth offline inference.
+              </p>
+              <div class="capability-pills">
+                <span>Gemma LLM</span>
+                <span>LM Studio</span>
+                <span>Linux CLI</span>
+                <span>GPU Optimization</span>
+              </div>
+            </div>
+            <div class="case-action">
+              <a class="btn-outline" href="#contact">
+                Discuss Setup <span>↗</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Expandable Accordion for Hardware Projects -->
+        <div class="more-builds-box">
+          <p class="mono-index">MORE WAYS I BUILD — HARDWARE & MICRO-ELECTRONICS LAB</p>
+
+          <div class="build-drawer">
+            <div class="drawer-header">
+              <div>
+                <span class="mono-tag">04 / MICRO-ELECTRONICS</span>
+                <h4>DIY PAM8403 Class-D Audio Amplifier Circuit</h4>
+              </div>
+              <button class="drawer-toggle" type="button" aria-expanded="false">
+                Read engineering notes <span>+</span>
+              </button>
+            </div>
+            <div class="drawer-content" hidden>
+              <p>
+                Built and tested custom stereo audio amplifier circuits using the PAM8403 micro-electronics module, focusing on clean power filtering, soldering precision, and acoustic output efficiency.
+              </p>
+            </div>
+          </div>
+
+          <div class="build-drawer">
+            <div class="drawer-header">
+              <div>
+                <span class="mono-tag">05 / CUSTOM HARDWARE & MOBILITY</span>
+                <h4>Custom PC Assembly & E-Bike Battery Conversion Research</h4>
+              </div>
+              <button class="drawer-toggle" type="button" aria-expanded="false">
+                Read engineering notes <span>+</span>
+              </button>
+            </div>
+            <div class="drawer-content" hidden>
+              <p>
+                Hands-on experience selecting components, assembling, and thermally optimizing custom desktop PCs, alongside researching lithium-ion battery architectures for electric bike conversions.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 05 / KNOWLEDGE SHARING & PEER MENTORING ================= -->
+    <section class="editorial-section border-top" id="mentoring">
+      <div class="wrapper">
+        
+        <div class="section-header-split">
+          <div>
+            <p class="mono-index">05 / KNOWLEDGE SHARING & COLLABORATION</p>
+            <h2 class="section-heading">Learning is stronger <span class="title-highlight">together.</span></h2>
+          </div>
+          <p class="section-intro-text">
+            I enjoy breaking down complex programming and hardware concepts into simple, practical steps for fellow students.
+          </p>
+        </div>
+
+        <div class="mentoring-grid">
+          <article class="mentor-card">
+            <span class="mentor-icon">{C}</span>
+            <h3>C Programming & Logic Mentoring</h3>
+            <p>Helping classmates understand pointers, memory allocation, loops, and data structures using insights from solving 100% of Codeforwin.</p>
+          </article>
+
+          <article class="mentor-card">
+            <span class="mentor-icon">&lt;/&gt;</span>
+            <h3>HTML5, CSS3 & Web Fundamentals</h3>
+            <p>Guiding peers through building clean, responsive web layouts with semantic HTML5, CSS Flexbox/Grid, and Vanilla JavaScript.</p>
+          </article>
+
+          <article class="mentor-card">
+            <span class="mentor-icon">⚡</span>
+            <h3>System Design & Hardware Discussions</h3>
+            <p>Collaborating on university coursework, ER diagrams, DFDs in Eraser.io, PC hardware builds, and local AI experimentation.</p>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 06 / CONTACT SECTION ================= -->
+    <section class="editorial-section border-top" id="contact">
+      <div class="wrapper">
+        
+        <p class="mono-index">06 / GET IN TOUCH</p>
+        <h2 class="giant-closing-title">
+          Let's build something <span class="title-highlight">meaningful.</span>
+        </h2>
+
+        <div class="contact-split">
+          
+          <div class="contact-channels">
+            <p class="section-intro-text">
+              Have a question about my code, a software engineering opportunity, or want to collaborate on a project? Reach out directly below.
+            </p>
+
+            <div class="channel-list">
+              <a class="channel-row" href="mailto:nafiz99666test@gmail.com">
+                <span class="mono-tag">EMAIL</span>
+                <strong>nafiz99666test@gmail.com</strong>
+                <span>↗</span>
+              </a>
+              <a class="channel-row" href="https://github.com/nafiz99666test-tech" target="_blank" rel="noopener noreferrer">
+                <span class="mono-tag">GITHUB</span>
+                <strong>github.com/nafiz99666test-tech</strong>
+                <span>↗</span>
+              </a>
+              <a class="channel-row" href="assets/cv.pdf" download="M_Nafiz_Imtiaz_CV.pdf">
+                <span class="mono-tag">CV / RESUME</span>
+                <strong>Download M_Nafiz_Imtiaz_CV.pdf</strong>
+                <span>↓</span>
+              </a>
+              <div class="channel-row">
+                <span class="mono-tag">LOCATION</span>
+                <strong>Dhaka, Bangladesh</strong>
+                <span>⌖</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Validated Contact Form -->
+          <form class="editorial-form" id="contactForm" novalidate>
+            <h3>Send a message</h3>
+            
+            <div class="field-group">
+              <label for="senderName">Your Name</label>
+              <input id="senderName" type="text" placeholder="e.g. Alex Morgan" required>
+            </div>
+
+            <div class="field-group">
+              <label for="senderEmail">Your Email</label>
+              <input id="senderEmail" type="email" placeholder="you@example.com" required>
+            </div>
+
+            <div class="field-group">
+              <label for="senderMessage">Message</label>
+              <textarea id="senderMessage" rows="4" placeholder="Write your message here..." required></textarea>
+            </div>
+
+            <button class="btn-solid full-width" type="submit">
+              Send Message <span>↗</span>
+            </button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-colophon">
+    <div class="wrapper colophon-row">
+      <span>© <span id="yearSpan">2026</span> M. NAFIZ IMTIAZ</span>
+      <span>BUILT WITH RAW HTML5, CSS3 & VANILLA JS</span>
+      <a href="#top">BACK TO TOP ↑</a>
+    </div>
+  </footer>
+
+  <!-- ================= FLOATING GOOGLE AI STUDIO ASSISTANT ================= -->
+  <div class="ai-widget" id="aiWidget">
+    
+    <!-- Floating Trigger Button -->
+    <button class="ai-Launcher" id="aiLauncher" type="button" aria-expanded="false" aria-controls="aiChatWindow">
+      <span class="ai-spark">✦</span>
+      <span>Ask Nafiz AI</span>
+    </button>
+
+    <!-- Chat Window -->
+    <aside class="ai-window" id="aiChatWindow" hidden aria-label="Nafiz AI Portfolio Assistant">
+      <div class="ai-header">
+        <div>
+          <span class="mono-tag">GOOGLE AI STUDIO · GEMINI</span>
+          <h4>Nafiz AI Assistant</h4>
+        </div>
+        <button class="ai-close" id="aiCloseBtn" type="button" aria-label="Close AI Assistant">×</button>
+      </div>
+
+      <!-- Chat Message History -->
+      <div class="ai-messages" id="aiMessages" aria-live="polite">
+        <div class="ai-bubble ai-bot">
+          Hi! I'm Nafiz's AI assistant powered by Google AI Studio. Ask me about his <strong>C programming</strong>, <strong>HTML5/CSS3/JS stack</strong>, <strong>AI setup</strong>, or <strong>CV</strong>!
+        </div>
+      </div>
+
+      <!-- Quick Suggestion Chips -->
+      <div class="ai-chips">
+        <button class="ai-chip" type="button" data-prompt="What are Nafiz's core skills?">Core Skills</button>
+        <button class="ai-chip" type="button" data-prompt="Tell me about his 100% Codeforwin C achievement.">100% C Milestone</button>
+        <button class="ai-chip" type="button" data-prompt="How does he deploy local AI models?">Local AI & GPU</button>
+        <button class="ai-chip" type="button" data-prompt="Where does he study?">Education & CV</button>
+      </div>
+
+      <!-- User Input Form -->
+      <form class="ai-input-row" id="aiForm">
+        <input id="aiInput" type="text" placeholder="Ask anything about Nafiz..." autocomplete="off" required>
+        <button type="submit">Send</button>
+      </form>
+    </aside>
+
+  </div>
+
+  <!-- Links external JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>
